@@ -1,0 +1,12 @@
+<div class="container">
+  <form (ngSubmit)="reverseInput()">
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString" [(ngModel)]="inputString" name="inputString" required placeholder="text here">
+    <button type="submit">Submit</button>
+  </form>
+
+  <div *ngIf="reversedString" class="result">
+    <p><strong>Original String:</strong> {{ inputString }}</p>
+    <p><strong>Reversed String:</strong> {{ reversedString }}</p>
+  </div>
+</div>
